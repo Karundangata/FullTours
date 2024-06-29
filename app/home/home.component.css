@@ -1,0 +1,61 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background: blue;
+    color: white;
+    padding: 1rem;
+  }
+  
+  nav a {
+    margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .tours, .hotels {
+    flex: 1;
+    margin: 0 1rem;
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .tours h2, .hotels h2 {
+    border-bottom: 2px solid blue;
+    padding-bottom: 0.5rem;
+  }
+  
+  .tours ul, .hotels ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .tours li, .hotels li {
+    margin-bottom: 1rem;
+  }
+  
+  footer {
+    background: blue;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  

@@ -1,0 +1,43 @@
+
+<header>
+    <h1>Admin Panel - Add Tours</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/managetour">Manage Tours</a></li>
+        <li><a routerLink="/managehotel">Manage Hotels</a></li>
+        <li><a routerLink="/managebooking">Manage Bookings</a></li>
+        <li><a routerLink="/manageuser">Manage Users</a></li>
+        <li><a routerLink="/logoutadmin">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="add-tour">
+      <h2>Add a New Tour</h2>
+      <form id="add-tour-form" [formGroup]="tourForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label for="tour-name">Tour Name</label>
+          <input type="text" id="tour-name" formControlName="name" required>
+        </div>
+        <div class="input-group">
+          <label for="tour-description">Description</label>
+          <input type="text" id="tour-description" formControlName="description" required>
+        </div>
+        <div class="input-group">
+          <label for="tour-price">Price</label>
+          <input type="number" id="tour-price" formControlName="price" required>
+        </div>
+        <div class="input-group">
+          <label for="tour-image-url">Image URL</label>
+          <input type="text" id="tour-image-url" formControlName="imageUrl" required>
+        </div>
+        <button type="submit">Add Tour</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Tour Booking System</p>
+  </footer>
+  

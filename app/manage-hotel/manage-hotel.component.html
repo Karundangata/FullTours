@@ -1,0 +1,51 @@
+<header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/managetour">Manage Tours</a></li>
+        <li><a routerLink="/managehotel">Manage Hotels</a></li>
+        <li><a routerLink="/managebooking">Manage Bookings</a></li>
+        <li><a routerLink="/manageuser">Manage Users</a></li>
+        <li><a routerLink="/logoutadmin">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="manage-hotels">
+      <h2>Manage Hotels</h2>
+      <!-- Form for adding/editing hotels -->
+      <form id="edit-hotel-form" (ngSubmit)="addHotel()">
+        <!-- Inputs for hotel details -->
+        <input type="text" [(ngModel)]="newHotel.name" name="name" id="hotel-name" placeholder="Hotel Name" required>
+        <input type="text" [(ngModel)]="newHotel.location" name="location" id="hotel-location" placeholder="Location" required>
+        <input type="number" [(ngModel)]="newHotel.rating" name="rating" id="hotel-rating" placeholder="Star Rating" min="1" max="5" required>
+        <input type="number" [(ngModel)]="newHotel.price" name="price" id="hotel-price" placeholder="Price per Night" required>
+        <input type="url" [(ngModel)]="newHotel.imageUrl" name="imageUrl" id="hotel-image" placeholder="Image URL" required>
+        <!-- Submit and cancel buttons -->
+        <div class="buttons">
+          <button type="submit">Add Hotel</button>
+          <button type="button" id="cancel-btn" (click)="resetForm()">Cancel</button>
+        </div>
+      </form>
+      <!-- Hotel listing -->
+      <div id="hotel-list" class="hotel-list">
+        <div *ngFor="let hotel of hotels" class="hotel-item">
+          <h2>{{ hotel.name }}</h2>
+          <p>{{ hotel.location }}</p>
+          <p>Rating: {{ hotel.rating }}</p>
+          <p>Price: {{ hotel.price }}</p>
+          <img [src]="hotel.imageUrl" alt="{{ hotel.name }}">
+          <div class="actions">
+            <button (click)="openUpdateForm(hotel.id)">Update</button>
+            <button (click)="deleteHotel(hotel.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Admin Panel</p>
+  </footer>
+  

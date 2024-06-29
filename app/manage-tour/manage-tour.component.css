@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: blue;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  nav ul li {
+    margin-right: 1em;
+    display: flex;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  section {
+    margin-bottom: 2em;
+  }
+  
+  section h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 0.5em;
+  }
+  
+  .buttons {
+    text-align: right;
+  }
+  
+  .buttons button {
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buttons button:hover {
+    background-color: blue;
+  }
+  
+  .tour-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .tour-item {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    width: calc(50% - 1em);
+  }
+  
+  .tour-item h3 {
+    margin-top: 0;
+  }
+  
+  .actions {
+    text-align: right;
+  }
+  
+  .actions button {
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: darkred;
+  }
+  
+  footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  

@@ -1,0 +1,28 @@
+<header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/managetour">Manage Tours</a></li>
+        <li><a routerLink="/managehotel">Manage Hotels</a></li>
+        <li><a routerLink="/managebooking">Manage Bookings</a></li>
+        <li><a routerLink="/manageuser">Manage Users</a></li>
+        <li><a routerLink="/logoutadmin">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="logout">
+      <h2>Logout</h2>
+      <p>Are you sure you want to log out?</p>
+      <div class="buttons">
+        <button (click)="confirmLogout()">Yes, Logout</button>
+        <button (click)="cancelLogout()">Cancel</button>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Admin Panel</p>
+  </footer>
+  

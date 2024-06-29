@@ -1,0 +1,40 @@
+<div class="home-page">
+    <header>
+      <nav>
+        <a routerLink="/login">Login</a>
+        <a routerLink="/signup">Sign Up</a>
+        <a routerLink="/booking">Booking</a>
+      </nav>
+    </header>
+  
+    <main>
+      <div>
+        <h2>Tours</h2>
+        <ul>
+          <li *ngFor="let tour of tours">
+            <!-- <h3>{{ tour.name }}</h3>
+            <p>{{ tour.description }}</p>
+            <p>Price: {{ tour.price | currency }}</p>
+            <button (click)="addToBooking('tour', tour)">Add to Booking</button> -->
+          </li>
+        </ul>
+      </div>
+  
+      <div>
+        <h2>Hotels</h2>
+        <ul>
+          <li *ngFor="let hotel of hotels">
+            <!-- <h3>{{ hotel.name }}</h3>
+            <p>{{ hotel.description }}</p>
+            <p>Rating: {{ hotel.rating }}/5</p>
+            <button (click)="addToBooking('hotel', hotel)">Add to Booking</button> -->
+          </li>
+        </ul>
+      </div>
+    </main>
+  
+    <footer>
+  
+      <p>Contact us at karundangata&#64;gmail.com</p>
+    
+  </footer>

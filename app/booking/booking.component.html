@@ -1,0 +1,44 @@
+<header>
+    <h1>User Bookings</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/signup">Sign Up</a></li>
+        <li><a routerLink="/booking">Booking</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="bookings">
+      <h2>Your Bookings</h2>
+      <div class="booking-list">
+        <div *ngFor="let booking of bookings" class="booking-item">
+          <h3>{{ booking.name }}</h3>
+          <p>Date: {{ booking.date }}</p>
+          <img [src]="booking.imageUrl" alt="{{ booking.name }}">
+          <button (click)="cancelBooking(booking.id)">Cancel Booking</button>
+        </div>
+      </div>
+    </section>
+  
+    <section id="new-booking">
+      <h2>Add a New Booking</h2>
+      <form (submit)="addBooking()">
+        <select [(ngModel)]="newBooking.type" required>
+          <option value="" disabled selected>Select Type</option>
+          <option value="tour">Tour</option>
+          <option value="hotel">Hotel</option>
+        </select>
+        <input type="text" [(ngModel)]="newBooking.name" placeholder="Name" required>
+        <input type="date" [(ngModel)]="newBooking.date" required>
+        <input type="url" [(ngModel)]="newBooking.imageUrl" placeholder="Image URL">
+        <button type="submit">Add Booking</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Safaris Africa</p>
+  </footer>
+  

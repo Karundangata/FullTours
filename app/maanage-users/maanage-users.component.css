@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: blue;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1em;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  section {
+    margin-bottom: 2em;
+  }
+  
+  section h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  form input {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+  
+  .buttons {
+    text-align: right;
+  }
+  
+  .buttons button {
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .buttons button:hover {
+    background-color: #555;
+  }
+  
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .user-item {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    width: calc(50% - 1em);
+    box-sizing: border-box;
+  }
+  
+  .user-item h3 {
+    margin-top: 0;
+  }
+  
+  .actions {
+    text-align: right;
+  }
+  
+  .actions button {
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  

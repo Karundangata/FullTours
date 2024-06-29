@@ -1,0 +1,58 @@
+
+<header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <ul>
+        <li><a routerLink="/managetour">Manage Tours</a></li>
+        <li><a routerLink="/managehotel">Manage Hotels</a></li>
+        <li><a routerLink="/managebooking">Manage Bookings</a></li>
+        <li><a routerLink="/manageuser">Manage Users</a></li>
+        <li><a routerLink="/logoutadmin">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="manage-bookings">
+      <h2>Manage Bookings</h2>
+      <!-- Form for editing bookings -->
+      <form id="edit-booking-form" (submit)="onSubmit($event)">
+        <!-- Inputs for booking details -->
+        <select id="user-select" [(ngModel)]="currentBooking.name" name="user" required>
+          <option value="">Select User</option>
+          <option *ngFor="let user of users" [value]="user.name">{{ user.name }}</option>
+        </select>
+        <select id="tour-select" [(ngModel)]="currentBooking.name" name="tour" required>
+          <option value="">Select Tour</option>
+          <option *ngFor="let tour of tours" [value]="tour.name">{{ tour.name }}</option>
+        </select>
+        <select id="hotel-select" [(ngModel)]="currentBooking.name" name="hotel" required>
+          <option value="">Select Hotel</option>
+          <option *ngFor="let hotel of hotels" [value]="hotel.name">{{ hotel.name }}</option>
+        </select>
+        <input type="date" id="booking-date" [(ngModel)]="currentBooking.date" name="date" required>
+        <input type="url" id="booking-image-url" [(ngModel)]="currentBooking.imageUrl" name="imageUrl" placeholder="Image URL" required>
+        <!-- Submit and cancel buttons -->
+        <div class="buttons">
+          <button type="submit">Update Booking</button>
+          <button type="button" id="cancel-btn" (click)="onCancel()">Cancel</button>
+        </div>
+      </form>
+      <!-- Booking listing -->
+      <div id="booking-list" class="booking-list">
+        <!-- Each booking item with options to edit/delete -->
+        <div *ngFor="let booking of bookings" class="booking-item">
+          <p>{{ booking.name }} - {{ booking.date }}</p>
+          <div class="actions">
+            <button (click)="editBooking(booking)">Edit</button>
+            <button (click)="deleteBooking(booking.id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Admin Panel</p>
+  </footer>
+  

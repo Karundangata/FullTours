@@ -1,0 +1,53 @@
+
+<div>
+    <header>
+      <h1>Admin Panel</h1>
+      <nav>
+        <ul>
+          <li><a routerLink="/managetour">Manage Tours</a></li>
+          <li><a routerLink="/managehotel">Manage Hotels</a></li>
+          <li><a routerLink="/managebooking">Manage Bookings</a></li>
+          <li><a routerLink="/manageuser">Manage Users</a></li>
+          <li><a routerLink="/logoutadmin">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main>
+      <section id="manage-users">
+        <h2>Manage Users</h2>
+        <!-- Form for editing user details -->
+        <form *ngIf="isEditing" (ngSubmit)="updateUser()">
+          <!-- Inputs for user details -->
+          <input type="text" [(ngModel)]="editedUser.username" name="username" placeholder="Username" required>
+          <input type="email" [(ngModel)]="editedUser.email" name="email" placeholder="Email" required>
+          <input type="password" [(ngModel)]="editedUser.password" name="password" placeholder="Password" required>
+          <input type="text" [(ngModel)]="editedUser.name" name="name" placeholder="Name" required>
+          <!-- Submit and cancel buttons -->
+          <div class="buttons">
+            <button type="submit">Update User</button>
+            <button type="button" (click)="cancelEdit()">Cancel</button>
+          </div>
+        </form>
+  
+        <!-- User listing -->
+        <div class="user-list">
+          <!-- Each user item with options to edit/delete -->
+          <div class="user-item" *ngFor="let user of users">
+            <h3>{{ user.username }}</h3>
+            <p>Email: {{ user.email }}</p>
+            <p>Name: {{ user.name }}</p>
+            <div class="actions">
+              <button (click)="editUser(user)">Edit</button>
+              <button (click)="deleteUser(user)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2024 Admin Panel</p>
+    </footer>
+  </div>
+  

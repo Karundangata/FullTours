@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: blue;
+    color: white;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1em;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  section {
+    margin-bottom: 2em;
+  }
+  
+  section h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .booking-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .booking-item {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    width: calc(50% - 1em);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-item h3 {
+    margin-top: 0;
+  }
+  
+  .booking-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  #new-booking form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #new-booking form select,
+  #new-booking form input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+  }
+  
+  #new-booking form button {
+    padding: 0.5em 1em;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #new-booking form button:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  

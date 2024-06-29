@@ -1,0 +1,6 @@
+<h2>Tours</h2>
+<!-- List of tours -->
+<div class="tour" *ngFor="let tour of tours">
+  <h3>{{ tour.name }}</h3>
+  <button (click)="addToBooking(tour)">Add to Booking</button>
+</div>
